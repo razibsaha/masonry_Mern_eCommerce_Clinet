@@ -1,11 +1,11 @@
-import React from 'react';
+import './Loading.css'
 
-const Loading = () => {
-    return (
-        <section>
-        <h1>Loading</h1>
-        <div></div>
-        </section>
-    );
-};
+function Loading() {
+
+  return (
+    <div className="spinner">
+    </div>
+  );
+}
+
 export default Loading;
