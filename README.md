@@ -1,6 +1,6 @@
 # Masonry - A light e-commerce
 
-[Masonry Live](https://github.com/facebook/create-react-app).
+[Masonry Live](https://masonry-commerce.web.app).
 
 * CSS FRAMEWORK - TAILWIND CSS
 * TAILWIND COMPONENT LIBRARY - DAISY UI

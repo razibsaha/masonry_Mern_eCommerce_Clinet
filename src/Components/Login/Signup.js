@@ -7,7 +7,6 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 import GoogleLogin from "./GoogleLogin";
@@ -16,7 +15,7 @@ const Signup = () => {
   const [createUserWithEmailAndPassword, loading] =
     useCreateUserWithEmailAndPassword(auth);
 
-  const [updateProfile, updating] = useUpdateProfile(auth);
+  const [updateProfile] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -35,7 +34,7 @@ const Signup = () => {
   const onSubmit = async (data) => {
 
     const name = data?.name;
-    
+
     await createUserWithEmailAndPassword(data.email, data.password);
 
     await updateProfile({ displayName: name });
