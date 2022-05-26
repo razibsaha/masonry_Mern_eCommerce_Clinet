@@ -11,7 +11,7 @@ const ToolsSection = () => {
     return (
         <section>
         <h1>ToolsSection</h1>
-        <div><h1>Total tools : {products.length}</h1></div>\
+        <div><h1>Total tools : {products.length}</h1></div>
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-10'>
         {
             products.map(product=> <Product key={product._id} product={product}></Product>)

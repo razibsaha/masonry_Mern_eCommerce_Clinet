@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Blogs from './Components/Blogs/Blogs';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import Portfolio from './Components/Portfolio/Portfolio';
 import ProductDetails from './Components/Product/ProductDetails';
 import Footer from './Components/Shared/Footer';
@@ -17,7 +18,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/product/:id' element={<ProductDetails></ProductDetails>}></Route>
-        <Route path='/login' element={<Portfolio></Portfolio>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Portfolio></Portfolio>}></Route>
       </Routes>
       <Footer></Footer>
