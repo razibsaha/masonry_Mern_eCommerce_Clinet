@@ -44,7 +44,6 @@ const Login = () => {
 
     console.log(data);
   };
-aaa
   if (loading) {
     return <Loading></Loading>;
   }
