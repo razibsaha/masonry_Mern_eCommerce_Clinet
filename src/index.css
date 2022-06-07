@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero1-bg {
+  background-image: url(./Assets//Images/hb1.jpg);
+}
+.hero2-bg {
+  background-image: url(./Assets//Images/hb2.jpg);
+}
+.hero3-bg {
+  background-image: url(./Assets//Images/hb3.jpg);
+}
+.mail-bg {
+  background-image: url(./Assets//Images/mailus.jpg);
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;

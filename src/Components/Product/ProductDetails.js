@@ -10,11 +10,10 @@ const ProductDetails = () => {
     data: product,
     isLoading,
     error,
-    isFetching
+    isFetching,
   } = useQuery(["products", id], () =>
-    fetch(`https://nameless-springs-99722.herokuapp.com/product/${id}`).then((res) => res.json())
+    fetch(`http://localhost:5000/product/${id}`).then((res) => res.json())
   );
-
 
   console.log(product);
   if (isLoading || isFetching) {
@@ -24,15 +23,8 @@ const ProductDetails = () => {
     return { error };
   }
 
-  const { _id, name, img, price, description } = product;
-
   return (
-    <section>
-      <h1 className="text-2xl font-bold">{name}</h1>
-      <h1 className="text-sm">{description}</h1>
-      <h1>{id}</h1>
-      <h1 className="text-red-500 font-bold">{price}</h1>
-      <img src={img} alt="" />
+    <section className="container mx-auto px-12">
       <div></div>
       <Purchase key={product._id} product={product}></Purchase>
     </section>

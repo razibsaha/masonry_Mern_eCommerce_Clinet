@@ -1,10 +1,11 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
+import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
 const RequireAuth = ({ children }) => {
-  const [user, loading] = useAuthState();
+  const [user, loading] = useAuthState(auth);
   const location = useLocation();
 
   if (loading) {
@@ -12,7 +13,7 @@ const RequireAuth = ({ children }) => {
   }
 
   if (!user) {
-    return <Navigate state={{ form: location }} to="/login" replace></Navigate>;
+    return <Navigate to="/login" state={{ from: location }}  replace></Navigate>;
   }
   return children;
 };
